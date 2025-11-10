@@ -1,9 +1,5 @@
 /* ========= Config ========= */
-// If you’re proxying via your Worker route (recommended), set it here:
-const WORKER_URL =
-  window.WORKER_URL /* optional global override */ ||
-  (typeof window !== "undefined" && window.TRAFFIC_ENDPOINT) || // keep parity with your other code style
-  "/api"; // <-- change to your deployed Worker URL if not same-origin
+const WORKER_URL = "https://withered-king-c68b.wwardhana.workers.dev/";
 
 const LS_SELECTED_KEY = "loreal_selected_ids_v1";
 const LS_CHAT_KEY = "loreal_chat_history_v1";
@@ -95,7 +91,7 @@ function productCardHTML(p) {
         <h3>${p.name}</h3>
         <p>${p.brand}</p>
         <div class="card-actions">
-          <span class="pill"><i class="fa-regular fa-tag"></i> ${
+          <span class="pill"><i class="fa-solid fa-tag"></i> ${
             p.category
           }</span>
           <button class="pill details-btn" type="button" data-action="details" data-id="${

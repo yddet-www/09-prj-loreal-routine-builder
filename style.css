@@ -379,6 +379,7 @@ html[dir="rtl"] .selected-list {
 .message.user .bubble {
   background: #fff;
   border: 1px solid var(--line);
+  color: #111;
 }
 .bubble {
   padding: 12px 14px;
@@ -474,6 +475,25 @@ html[dir="rtl"] .selected-list {
 }
 .desc-modal h3 {
   margin-bottom: 10px;
+}
+.desc-modal[open] {
+  position: fixed; /* override UA styles */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: min(640px, 92%);
+  max-height: 80vh; /* prevent overflow off-screen */
+  overflow: auto; /* scroll if content is tall */
+  padding: 20px;
+  border: none;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+/* optional: nicer backdrop */
+.desc-modal::backdrop {
+  background: rgba(0, 0, 0, 0.35);
 }
 .modal-close {
   margin-top: 10px;
